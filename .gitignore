@@ -1,7 +1,7 @@
 # My temp files
 1.py
-/.idea/
 /venv/
+**/.idea/
 **/__pycache__
 
 # Byte-compiled / optimized / DLL files
