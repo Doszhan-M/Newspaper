@@ -109,6 +109,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'secret',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     },
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -140,7 +150,7 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-MODELTRANSLATION_DEBUG = True
+MODELTRANSLATION_DEBUG = False
 
 LOCALE_PATH = [
     os.path.join(BASE_DIR, 'locale')
