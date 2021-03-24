@@ -79,7 +79,7 @@ class NewsSearch(ListView):
         return context
 
 
-# Наследуем переопредяляем функции в классе PermissionRequiredMixin, далее наследуемся от этого класса
+# Наследуем переопределяем функции в классе PermissionRequiredMixin, далее наследуемся от этого класса
 class RedirectPermissionRequiredMixin(PermissionRequiredMixin):
     login_url = reverse_lazy('login')
 

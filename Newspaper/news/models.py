@@ -89,15 +89,12 @@ class Post(models.Model):
     # Возвращает название категории с которой связан текущий пост
     def post_categories(self):
         data = Category.objects.filter(post__post_category__post=self)
+        # Множество удобна тем, что одинаковые значения не дублируются
         category = set()
         for i in data:
-            pass
             category.add(i.category)
         return ' '.join(list(category))
 
-    def post_date(self):
-        date = Post.objects.filter(post_author=1)
-        print(date)
 
     # добавим абсолютный путь чтобы после создания нас перебрасывало на страницу с постом
     def get_absolute_url(self):
@@ -127,9 +124,9 @@ class Post(models.Model):
     def best_post():
         return Post.find_best_post()
 
-    # Строковое отабражение поста
+    # Строковое отображение поста
     def __str__(self):
-        return f'{self.post_author}, {self.headline}, {datetime.ctime(self.date_create)}'
+        return f'{self.post_author}, {self.headline}, {datetime.ctime(self.date_create)}, {self.post_categories()},'
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs) # сначала вызываем метод родителя, чтобы объект сохранился
