@@ -1,7 +1,7 @@
 # Новостной блог
 ![picture](https://www.redsign.ru/upload/iblock/87b/87bf6a64e9085b64872f1daf19cdae53.jpg)
 
-###Учебный проект от skillfactory:
+### Новостной блог SkillFactory:
 
 - Flatpages
 
@@ -9,7 +9,7 @@
 
 - Представления и шаблоны
 
- -Фильтры и формы
+- Фильтры и формы
 
 - Авторизация и регистрация
 
