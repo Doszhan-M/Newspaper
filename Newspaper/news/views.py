@@ -1,21 +1,21 @@
+import logging
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import PermissionRequiredMixin
-from django.core.mail import send_mail
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 
-from django.conf import settings
+from django.utils.translation import gettext as _  # импортируем функцию для перевода
+from django.utils import timezone
+from django.core.cache import cache # импортируем наш кэш
 from .filters import NewsFilter
 from .forms import PostForm
 from .models import Post, Author, Category, CategorySubscribers
-from .tasks import send_mail_subscribe, send_mail_unsubscribe  # Импортируем задачу для асинхронной задачи
-from django.core.cache import cache # импортируем наш кэш
-import logging
-from django.utils.translation import gettext as _  # импортируем функцию для перевода
-from django.utils import timezone
-import datetime
+# Импортируем задачу для асинхронной задачи
+from .tasks import send_mail_subscribe, send_mail_unsubscribe  
+
+
 
 
 logger = logging.getLogger(__name__)

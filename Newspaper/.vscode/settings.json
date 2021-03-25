@@ -1,0 +1,21 @@
+{
+    "cSpell.language": "en,ru",
+    "cSpell.enabled": true,
+    "cSpell.enableFiletypes": [
+        "python"
+    ],
+
+    "python.linting.pylintEnabled": true,
+    "python.linting.pycodestyleEnabled": false,
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 14,
+    "editor.wordWrapColumn": 90,
+    "editor.autoClosingQuotes": "beforeWhitespace",
+    "python.pythonPath": "/home/linux/github/Newspaper/venv/bin/python",
+    "python.linting.pylintArgs": [
+        "--disable=C0111", // missing docstring
+        "--load-plugins=pylint_django",
+        "--disable=django-not-configured",
+        "--django-settings-module=NewsPaperD.settings",
+     ],
+}
