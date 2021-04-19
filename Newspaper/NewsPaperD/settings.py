@@ -179,7 +179,6 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 # Отправляем письмо после регистрации
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
 SOCIALACCOUNT_EMAIL_VERIFICATION = ACCOUNT_EMAIL_VERIFICATION
-
 # Переход по ссылке сразу активирует пользователя
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 # Указываем файл, где храниться функция переопределения редиректов allauth
@@ -217,7 +216,7 @@ CACHES = {
     }
 }
 
-"""# Блок логирования
+# Блок логирования
 LOGGING = \
     {
         'version': 1,
@@ -337,4 +336,4 @@ LOGGING = \
                 'level': 'DEBUG',
             },
         }
-    }"""
+    }
