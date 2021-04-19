@@ -9,7 +9,7 @@ class NewsFilter(FilterSet):
     class Meta:
         model = Post
         # fields = ('post_author')
-        fields = {''
+        fields = {
                   'post_author':['exact'],
                   'date_create':['range']
                   }
